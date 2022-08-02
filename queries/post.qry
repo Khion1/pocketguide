@@ -1,0 +1,27 @@
+<?php
+    class Post{
+          
+          
+          function insert_post($pdo, $date_posted, $a_author, $a_subject, $a_content){
+          $stmt = $pdo->prepare ('INSERT INTO tbl_announcements
+          (date_posted,
+          a_author,
+          a_subject,
+          a_content,
+          VALUES (:date_posted,
+          :a_author,
+          :a_subject,
+          :a_content
+          )
+          ');      
+         $stmt->execute([
+            'date_posted' => $date_posted,
+            'a_author' => $a_author,
+            'a_subject' => $a_subject,
+            'a_content' => $a_content, 
+            ]);
+         }
+    
+    }
+      header('Location: ../home.php');
+?>

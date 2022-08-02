@@ -1,7 +1,7 @@
 <?php
 $database = 'mysql:host=localhost; dbname=pocketguide';
 $user = 'pocketguide-admin';
-$pwd = 'zHEERAjSU-Z1f!RC';
+$pwd = '--DI/U(G_U6oDpKC';
 try{
 $pdo = new PDO($database, $user, $pwd);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
